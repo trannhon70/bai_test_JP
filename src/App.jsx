@@ -2,7 +2,9 @@
 
 function App() {
   return (
-    <>ádsadsa</>
+    <>NFT送るのに
+      まだガス代
+      払ってるの？</>
   );
 }
 
