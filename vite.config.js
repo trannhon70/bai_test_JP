@@ -17,7 +17,7 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['bacnhuan.dakhoaandong.com'],
+    allowedHosts: [''],
     host: true, // Cho phép truy cập từ mọi host
   },
   base: '/', // Đảm bảo đúng base path khi deploy

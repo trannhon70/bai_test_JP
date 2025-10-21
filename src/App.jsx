@@ -1,10 +1,11 @@
-
+import { Fragment } from "react";
+import ComponentBanner from "./component/banner"
 
 function App() {
   return (
-    <>NFT送るのに
-      まだガス代
-      払ってるの？</>
+   <Fragment>
+      <ComponentBanner />
+   </Fragment>
   );
 }
 
