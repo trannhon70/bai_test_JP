@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import banner_4 from "../../assets/banner/banner_4.png";
 import banner_5 from "../../assets/banner/banner_5.png";
 import teacher from "../../assets/banner/teacher.png";
@@ -14,7 +14,8 @@ import item_9 from "../../assets/items/item_9.png";
 import item_label from "../../assets/items/item_label.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import SVG_Title from "../svg/title";
+import { gsap } from "gsap"
 const dataCarousel = [
     { id: 1, title: 'デジタルコレクティブ', description: 'デジタルアイテムを収集、売買することができます。', img: item_2 },
     { id: 2, title: 'ゲームアイテム', description: 'ゲーム内アイテムやキャラクターをNFTとして発行し、プレイヤーが所有することで、マーケットプレイスで売買することができます。   ', img: item_3 },
@@ -27,6 +28,10 @@ const dataCarousel = [
 ]
 
 const CompoenntWhatIsNFT: FC = () => {
+    const boxRef = useRef(null);
+    useEffect(() => {
+        gsap.to(boxRef.current, { x: 300, duration: 2 });
+    }, []);
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -47,7 +52,7 @@ const CompoenntWhatIsNFT: FC = () => {
         }
     };
     return <div className="bg-dot-pattern w-full">
-        <div className="pt-[4%] px-[3%] pb-[500px]" >
+        <div className="pt-[4%] px-[3%] pb-[200px]" >
             <div className="relative bg-white rounded-3xl  pb-[200px] " >
                 <div className="flex items-center gap-[10px] box-border">
                     <div className="w-[45%]  pl-[5%] " >
@@ -114,6 +119,20 @@ const CompoenntWhatIsNFT: FC = () => {
 
 
                     </Carousel>
+                </div>
+            </div>
+        </div>
+
+        <div className="min-h-[300px]">
+            <div className="marquee">
+                <div className="marquee-content">
+                    ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦
+                </div>
+                <div className="marquee-content">
+                    ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦
+                </div>
+                <div className="marquee-content">
+                    ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦ 次世代 ✦
                 </div>
             </div>
         </div>

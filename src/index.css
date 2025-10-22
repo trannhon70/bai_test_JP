@@ -24,3 +24,31 @@
 .react-multiple-carousel__arrow--left {
     display: none;
 }
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* chiều rộng vùng hiển thị */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: rotateZ(9deg);
+    margin-top: 100px;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 60s linear infinite;
+    font-size: 2rem;
+    color: white; /* chỉnh màu theo ý */
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

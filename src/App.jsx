@@ -7,7 +7,9 @@ function App() {
     <Fragment>
       <ComponentBanner />
       <CompoenntWhatIsNFT />
+      <div className="h-[1000px]" >
 
+      </div>
     </Fragment>
   );
 }
