@@ -4,6 +4,9 @@ import React, { FC, useEffect } from "react";
 import { gsap, Power2, Power4 } from "gsap";
 import $ from "jquery";
 import banner from "../../assets/banner/banner.png";
+import banner_1 from "../../assets/banner/banner_1.png";
+import banner_2 from "../../assets/banner/banner_2.png";
+import banner_3 from "../../assets/banner/banner_3.png";
 import logo from "../../assets/icons/icon_logo.png";
 import "./banner.css";
 
@@ -260,12 +263,12 @@ const ComponentBanner: FC = () => {
     return (
         <div className="relative">
             <img src={banner} alt="banner" />
-            <div className="absolute top-0 left-0  w-full">
-                <div className="flex  justify-between p-4 w-full">
+            <div style={{ zIndex: 99999 }} className="absolute top-0 left-0  w-full">
+                <div className="flex  justify-between p-4 w-full ">
                     <div>
                         <img width={200} src={logo} alt="logo" />
                     </div>
-                    <div className=" w-[23%] ">
+                    <div className=" w-[350px] ">
                         <div className="container">
 
                             <div className="flex justify-end">
@@ -301,12 +304,22 @@ const ComponentBanner: FC = () => {
 
                     </div>
                 </div>
-              
+
             </div>
-              <div className="absolute top-28 left-0 w-full p-4" >
-                    sadsads
+            <div className="absolute top-0 left-0 w-full p-4  " >
+                <div className="w-[50%]" >
+                    <img src={banner_1} alt="..." />
                 </div>
 
+            </div>
+            <div className="absolute top-0 right-0 w-full p-4 flex justify-end  " >
+                <div className="relative w-[65%]">
+                    <img className="w-full" src={banner_2} alt="..." />
+                    <div className="absolute inset-0 z-30 flex items-center justify-center ">
+                        <img className="w-[50%]" src={banner_3} alt="..." />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
