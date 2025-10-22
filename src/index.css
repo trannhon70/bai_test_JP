@@ -15,3 +15,12 @@
     background-image: radial-gradient(black 1px, transparent 1px);
     background-size: 20px 20px; /* khoảng cách giữa các chấm */
 }
+
+.react-multi-carousel-track {
+    align-items: end;
+}
+
+.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow--left {
+    display: none;
+}
